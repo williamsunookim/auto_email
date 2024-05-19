@@ -1,9 +1,10 @@
 import time
 import json
 import os
+import streamlit as st
 
 
-OPENAI_KEY = os.environ.get("OPENAI_API_KEY")
+OPENAI_KEY = st.secrets["OPENAI_API_KEY"]
 from openai import OpenAI
 model_list = ['gpt-4-1106-preview', 'gpt-4-0125-preview', 'gpt-3.5-turbo']
 selected_model = model_list[0]
